@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 int gcd_naive(int a, int b) {
     int current_gcd = 1;
     for (int d = 2; d <= a && d <= b; d++) {
@@ -13,8 +15,8 @@ int gcd_naive(int a, int b) {
 }
 
 int gcd(long long x, long long y) {
-    long long a = std::max(x, y);
-    long long b = std::min(x, y);
+    long long a = max(x, y);
+    long long b = min(x, y);
     if (b == 0)
         return a;
     else
@@ -23,8 +25,7 @@ int gcd(long long x, long long y) {
 
 int main() {
     int a, b;
-    std::cin >> a >> b;
-    // std::cout << gcd_naive(a, b) << std::endl;
-    std::cout << gcd(a, b) << std::endl;
+    cin >> a >> b;
+    cout << gcd(a, b) << endl;
     return 0;
 }
